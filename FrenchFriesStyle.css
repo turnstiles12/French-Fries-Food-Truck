@@ -32,7 +32,8 @@ nav a:hover {
 
 #menu {
     display: grid; /* Enables grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic columns */
+   
+    grid-template-columns: 2;  
     gap: 20px; /* Space between items */
     justify-content: center; /* Centers the grid items */
 
