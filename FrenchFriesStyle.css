@@ -1,7 +1,7 @@
 nav {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 10px 0;  
 }
 
 nav ul {
@@ -14,16 +14,19 @@ nav ul {
 
 nav li {
     margin: 0 15px;
+    
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    
 }
 
 nav a:hover {
     text-decoration: underline;
+    color:green
 }
 
 
