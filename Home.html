@@ -20,4 +20,54 @@
             </ul>
         </nav>
     </header> 
+
+
+
+    <div class="carousel">
+        <div class="carousel-track">
+            <img src="images/truck1.jpg" alt="Food Truck Image 1" class="carousel-item">
+            <img src="images/truck2.jpg" alt="Food Truck Image 2" class="carousel-item">
+            <img src="images/truck3.jpg" alt="Food Truck Image 3" class="carousel-item">
+        </div>
+        <button class="carousel-button prev">←</button>
+        <button class="carousel-button next">→</button>
+    </div>
+    
+
+
+
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+        const items = document.querySelectorAll('.carousel-item');
+    
+        let currentIndex = 0;
+    
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < items.length - 1) {
+                currentIndex++;
+                updateCarousel();
+            } else {
+                currentIndex = 0; // Loop back to the first item
+                updateCarousel();
+            }
+        });
+    
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            } else {
+                currentIndex = items.length - 1; // Loop back to the last item
+                updateCarousel();
+            }
+        });
+    </script>
+    
 </body> 
