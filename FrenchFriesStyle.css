@@ -1,9 +1,4 @@
-
-
-
-
-/*  ---------------------------------------------------------- */
-/* General Styles */
+                                                    /* General Stuff */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -19,9 +14,7 @@ h1, h2, h3 {
 }
 
 
-
-
-/* Header and Navigation */
+                                /* Header and Navigation */
 header {
     background-color: #333;
     color: white;
@@ -53,7 +46,64 @@ nav a:hover {
     color: green;
 }
 
-/* Menu Section */
+                                                /*   Home Page      */
+                                                /* Carousel         */
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    max-width: 800px; /* Adjust to your preferred width */
+    margin: 20px auto; /* Centers the carousel */
+    overflow: hidden; /* Hides items outside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+}
+
+/* Carousel Track */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth sliding transition */
+}
+
+/* Carousel Items (Images) */
+.carousel-item {
+    min-width: 100%; /* Each item takes the full width of the container */
+    height: 400px; /* Adjust to match your desired height */
+    object-fit: cover; /* Ensures images are nicely cropped */
+    border-radius: 10px; /* Ensures images match container shape */
+}
+
+/* Navigation Buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.carousel-button.prev {
+    left: 10px; /* Position to the left */
+}
+
+.carousel-button.next {
+    right: 10px; /* Position to the right */
+}
+
+.carousel-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+                                                    /* Menu Section */
 #menu {
     max-width: 1000px;
     margin: 20px auto;
@@ -138,6 +188,13 @@ nav a:hover {
         margin: 10px;
     }
 }
+
+
+
+
+
+
+
 
 
 
