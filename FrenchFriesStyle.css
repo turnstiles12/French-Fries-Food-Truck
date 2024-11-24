@@ -1,7 +1,33 @@
-nav {
+
+
+
+
+/*  ---------------------------------------------------------- */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #922909; /* Warm color for headings */
+    text-align: center;
+}
+
+
+
+
+/* Header and Navigation */
+header {
     background-color: #333;
     color: white;
-    padding: 10px 0;  
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -14,48 +40,106 @@ nav ul {
 
 nav li {
     margin: 0 15px;
-    
 }
 
 nav a {
-    color: white;
     text-decoration: none;
+    color: white;
     font-weight: bold;
-    
 }
 
 nav a:hover {
     text-decoration: underline;
-    color:green
+    color: green;
 }
 
-
+/* Menu Section */
 #menu {
-    display: grid; /* Enables grid layout */
-   
-    grid-template-columns: 2;  
-    gap: 20px; /* Space between items */
-    justify-content: center; /* Centers the grid items */
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
 
-h2 {
-    grid-column: span 2;
-    font-size: 1.8rem;
-    margin-bottom: 20px; /* Space between title and grid */
-    text-align: center; 
-    color: #ff5722; 
-}
-
-h4 {
-    grid-column: span 2;
-    font-size: 1.2rem;
-    margin-bottom: 10px; /* Space between title and grid */
-    text-align: center; 
-    color: brown; 
-}
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Space between grid items */    
 }
 
 .menu-item {
     text-align: center;
-    border-radius: 8px;
-    padding: 10px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    grid-column: span 1;
 }
+
+.menu-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Section Titles */
+#menu h2 {
+    font-size: 1.8rem;
+    margin: 30px 0 10px;
+    text-decoration: underline;
+    text-decoration-color: #ff5722;
+
+    grid-column: span 2
+}
+#menu h2 em {
+    font-style: italic;
+    color: #ff5722;
+}    
+
+
+#menu h4 {       /* "description about section (e.g. first 2 dips are free) */
+    text-align: center;
+    margin-bottom: 20px;
+    color: #777;
+    font-size: 1rem;
+
+    grid-column: span 2
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .menu-item img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .menu-item {
+        margin: 10px;
+    }
+}
+
+
+
+
+
