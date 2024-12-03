@@ -196,6 +196,15 @@ img {
   .about p {
     text-align: center;
   }
+  .order form {
+    border: 2px solid black;
+    font-size:large;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+  }
 
 
 
