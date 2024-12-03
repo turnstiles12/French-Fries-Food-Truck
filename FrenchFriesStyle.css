@@ -188,7 +188,14 @@ nav a:hover {
         margin: 10px;
     }
 }
-
+img {
+    width: 45%;             /* Adjust width to fit two images */
+    height: auto;           /* Maintain aspect ratio */
+    object-fit: cover;      /* Adjust image content if needed */
+  }
+  .about p {
+    text-align: center;
+  }
 
 
 
