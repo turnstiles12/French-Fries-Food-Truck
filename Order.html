@@ -3,34 +3,70 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="FrenchFriesStyle.css">
-    <script src = "frenchfries.js"></script>
+    <link rel="stylesheet" href="orderStyle.css">
     <title>French Fries Food Truck Order</title>
 <head>
-
+<header>
+    <h1> Order </h1>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Order.html">Order</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+        </ul>
+    </nav>
+    
+</header>
 <body>
-    <header>
-        <h1> Order </h1>
-        <nav>
-            <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="Menu.html">Menu</a></li>
-                <li><a href="Order.html">Order</a></li>
-                <li><a href="AboutUs.html">About Us</a></li>
-            </ul>
-        </nav>
-        
-    </header>
-    <div class="order">
-    <form action = "submit.html"> 
-        <input type = "checkbox" name = "menu-item" value = "RFF">
-        <label>Regular French Fries</label></br>
-        <input type = "checkbox" name = "menu-item" value = "SFF">
-        <label>Spicy French Fries</label></br>
-        <input type = "checkbox" name = "menu-item" value = "SPF">
-        <label>Sweet Potato Fries</label><br>
-        <button>Submit</button>
-    </form>
-</div>
+    <main class="order-page">
+        <!-- Menu Section -->
+        <section class="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-item"> 
+                <img src="images/ai-generated-fries.webp" alt="Regular Fries" width="300" height="300">
+                <h3>Regular Fries</h3>
+                <p>$5 - Perfectly golden, crispy on the outside and fluffy on the inside—our classic fries are the ultimate snack for any occasion.</p>
+                <button onclick="addToOrder('Regular Fries', 5)">Add To Order</button>
+            </div>
 
+            <div class="menu-item"> 
+                <img src="images/sweet_potato_fries.jpg" alt="Sweet Potato Fries">
+                <h3>Sweet Potato Fries</h3>
+                <p>$6 - Crispy on the outside and soft on the inside, our sweet potato fries deliver a perfect balance of sweetness and crunch.</p>
+                <button onclick="addToOrder('Sweet Potato Fries', 5)">Add To Order</button>
+            </div>
+
+            
+            <div class="menu-item"> 
+                <img src="images/cheese-fries.jpg" alt="Cheese Fries">
+                <h3>Cheese Fries</h3>
+                <p>$8 - Loaded with warm, gooey melted cheese, these fries are the ultimate indulgence for any cheese lover.</p>
+                <button onclick="addToOrder('Cheese Fries', 5)">Add To Order</button>
+            </div>     
+            
+            <div class="menu-item"> 
+                <img src="images/home_fries.jpg" alt="Home Fries">
+                <h3>Home Fries</h3>
+                <p>$5 - "Seasoned to perfection, these thick-cut, golden home fries are a hearty and satisfying classic. Perfectly crispy on the edges and tender in the center."</p>
+                <button onclick="addToOrder('Home Fries', 5)">Add To Order</button>
+            </div>   
+
+            <div class="menu-item"> 
+                <img src="images/truffle_fries.jpg" alt="Truffle Fries">
+                <h3>Truffle Fries</h3>
+                <p>$7 - Elevate your fry experience with our hand-cut truffle fries. Tossed in aromatic truffle oil and topped with Parmesan cheese, these gourmet fries are pure indulgence.</p>
+                <button onclick="addToOrder('Truffle Fries', 5)">Add To Order</button>
+            </div>   
+        </section>
+
+        <!-- Order Summary Section -->
+        <section class="order-summary">
+            <h2>Order Summary</h2>
+            <ul id="order-list"></ul>
+            <p id="total-price">Total: $0</p>
+            <button id="place-order">Place Order</button>
+        </section>
+    </main>
+    <script src="js.js"></script>
 </body>
+</html>
