@@ -1,0 +1,108 @@
+/* Main Order Page Layout */
+.order-page {
+    display: flex; /* Splits the layout into two sections */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+                /* Menu Section */
+.menu {
+    flex: 2; /* Takes up 2/3 of the space */
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+.menu h2 {
+    margin-bottom: 15px;
+    color: #ff5722;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.menu-item button {
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-item button:hover {
+    background: #e64a19;
+}
+                 /* Order Summary Section */
+.order-summary {
+    flex: 1; /* Takes up 1/3 of the space */
+    background: rgb(174, 240, 174);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(101, 31, 31, 0.1);
+    top: 20px; /* Sticks to the top when scrolling */
+}
+
+.order-summary h2 {
+    color: #ff5722;
+}
+
+#order-list {
+    list-style: none;
+    padding: 0;
+}
+
+#order-list li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#remove-order{
+    color:red;
+    cursor: pointer;
+}
+
+#total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+
+#place-order:hover {
+    background: blue;
+    cursor: pointer;
+}
+
+#place-order {
+    width: 100%;
+    padding: 10px 0;
+    background: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
