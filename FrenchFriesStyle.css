@@ -1,4 +1,4 @@
-                                                    /* General Stuff */
+/* General Stuff */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -103,75 +103,7 @@ nav a:hover {
 
 
 
-                                                    /* Menu Section */
-#menu {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* Space between grid items */    
-}
-
-.menu-item {
-    text-align: center;
-    margin: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-
-    grid-column: span 1;
-}
-
-.menu-item img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.menu-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.menu-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.menu-item p {
-    font-size: 0.95rem;
-    color: #555;
-}
-
-/* Section Titles */
-#menu h2 {
-    font-size: 1.8rem;
-    margin: 30px 0 10px;
-    text-decoration: underline;
-    text-decoration-color: #ff5722;
-
-    grid-column: span 2
-}
-#menu h2 em {
-    font-style: italic;
-    color: #ff5722;
-}    
-
-
-#menu h4 {       /* "description about section (e.g. first 2 dips are free) */
-    text-align: center;
-    margin-bottom: 20px;
-    color: #777;
-    font-size: 1rem;
-
-    grid-column: span 2
-}
+                                                   
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -192,11 +124,15 @@ img {
     width: 45%;             /* Adjust width to fit two images */
     height: auto;           /* Maintain aspect ratio */
     object-fit: cover;      /* Adjust image content if needed */
-  }
-  .about p {
+    display: block;  /* center image */
+    margin-left: auto;
+    margin-right: auto;
+
+    }
+    .about p {
     text-align: center;
-  }
-  .order form {
+    }
+    .order form {
     border: 2px solid black;
     font-size:large;
     text-align: center;
@@ -204,15 +140,20 @@ img {
     margin: 0 auto;
     position: relative;
     top: 50px;
-  }
+    }
 
 
+.back_to_top_button {
+    grid-column: span 2;
+}
 
-
-
-
-
-
-
-
-
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
