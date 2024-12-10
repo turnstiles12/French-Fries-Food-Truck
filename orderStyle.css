@@ -1,3 +1,57 @@
+
+
+
+
+/* General Stuff */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #922909; /* Warm color for headings */
+    text-align: center;
+}
+
+
+                                /* Header and Navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: green;
+}
+
+
+
 /* Main Order Page Layout */
 .order-page {
     display: flex; /* Splits the layout into two sections */
@@ -27,7 +81,18 @@
     align-items: center;
     gap: 15px;
     margin-bottom: 20px;
+
+
+    transform: translateX(400%);        /*for scroll animation*/
+    transition: transform 0.4s ease;    
 }
+
+
+                /*for scroll animation*/
+  .menu-item.show {
+    transform: translateX(0);
+  }
+
 
 .menu-item img {
     width: 100px;
@@ -38,21 +103,24 @@
 
 
 .menu-item button {
+
     background: #ff5722;
     color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .menu-item button:hover {
-    background: #e64a19;
+    background: #e43804; 
 }
-                 /* Order Summary Section */
+                              /* Order Summary Section */
 .order-summary {
     flex: 1; /* Takes up 1/3 of the space */
-    background: rgb(174, 240, 174);
+    background: rgb(170, 174, 243);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(101, 31, 31, 0.1);
@@ -89,15 +157,10 @@
 
 
 
-#place-order:hover {
-    background: blue;
-    cursor: pointer;
-}
-
 #place-order {
     width: 100%;
     padding: 10px 0;
-    background: #ff5722;
+    background: rgb(8, 137, 8);
     color: white;
     border: none;
     border-radius: 8px;
@@ -105,4 +168,47 @@
     cursor: pointer;
 }
 
+#place-order:hover {
+    background: green;
+    cursor: pointer;
+}
 
+
+
+
+
+/* Button Styles */
+.menu-item button {
+    position: relative !important;
+    overflow: hidden !important;
+    background-color: #ff5722 !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    font-size: 1rem !important;
+    outline: none !important;
+}
+
+button.ripple:hover {
+    background-color: #e64a19 !important;
+}
+
+/* Ripple Effect Styles */
+.circle {
+    position: absolute !important;
+    border-radius: 50% !important;
+    transform: scale(0) !important;
+    animation: ripple 0.6s linear !important;
+    background: rgba(255, 255, 255, 0.5) !important; /* Light ripple */
+    pointer-events: none !important;
+}
+
+/* Keyframes for Ripple Animation */
+@keyframes ripple {
+    to {
+        transform: scale(4) !important;
+        opacity: 0 !important;
+    }
+}
