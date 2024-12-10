@@ -90,32 +90,6 @@ buttons.forEach(button => {
 });
 
 
-const jokeEl = document.getElementById('joke')
-const jokeBtn = document.getElementById('insert-joke')
-
-jokeBtn.addEventListener('click', generateJoke)
-
-generateJoke()
-
-// USING ASYNC/AWAIT
-async function generateJoke() {
-  const config = {
-    headers: {
-      Accept: 'application/json',
-    },
-  }
-
-  const res = await fetch('https://icanhazdadjoke.com', config)
-
-  const data = await res.json()
-
-  jokeEl.innerHTML = data.joke
-}
-
-
-
-
-
 //loading animation
 const menuContainer = document.querySelector('.menu');
 const boxes = document.querySelectorAll('.menu-item')
@@ -139,3 +113,31 @@ function checkBoxes() {
         }
     })
 }
+
+
+
+
+//Dad Jokes
+const jokeEl = document.getElementById('insert-joke')
+const jokeBtn = document.getElementById('joke')
+
+jokeBtn.addEventListener('click', generateJoke)
+
+generateJoke()
+
+// USING ASYNC/AWAIT
+async function generateJoke() {
+  const config = {
+    headers: {
+      Accept: 'application/json',
+    },
+  }
+
+  const res = await fetch('https://icanhazdadjoke.com', config)
+
+  const data = await res.json()
+
+  jokeEl.innerHTML = data.joke
+}
+
+
