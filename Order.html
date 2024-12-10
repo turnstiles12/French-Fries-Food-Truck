@@ -1,156 +1,151 @@
-/* General Stuff */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9; /* Light background for contrast */
-    color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
-h1, h2, h3 {
-    color: #922909; /* Warm color for headings */
-    text-align: center;
-}
+    <link rel="stylesheet" href="orderStyle.css">
+    <title>French Fries Food Truck Order</title>
+<head>
+<header>
+    <h1> Order </h1>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Order.html">Order</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+        </ul>
+    </nav>
+    
+</header>
+<body>
+    <main class="order-page">
+        <!-- Menu Section -->
+        <section class="menu">
+            <h2>Our Menu</h2>
 
+            <h3><em>Fries</em></h3>
+            <div class="menu-item"> 
+                <img src="images/ai-generated-fries.webp" alt="Regular Fries" width="300" height="300">
+                <h3>Regular Fries</h3>
+                <p>$5 - Perfectly golden, crispy on the outside and fluffy on the inside—our classic fries are the ultimate snack for any occasion.</p>
+                <button onclick="addToOrder('Regular Fries', 5)">Add To Order</button>
+            </div>
 
-                                /* Header and Navigation */
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+            <div class="menu-item"> 
+                <img src="images/sweet_potato_fries.jpg" alt="Sweet Potato Fries">
+                <h3>Sweet Potato Fries</h3>
+                <p>$6 - Crispy on the outside and soft on the inside, our sweet potato fries deliver a perfect balance of sweetness and crunch.</p>
+                <button onclick="addToOrder('Sweet Potato Fries', 6)">Add To Order</button>
+            </div>
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
+            
+            <div class="menu-item"> 
+                <img src="images/cheese-fries.jpg" alt="Cheese Fries">
+                <h3>Cheese Fries</h3>
+                <p>$8 - Loaded with warm, gooey melted cheese, these fries are the ultimate indulgence for any cheese lover.</p>
+                <button onclick="addToOrder('Cheese Fries', 8)">Add To Order</button>
+            </div>     
+            
+            <div class="menu-item"> 
+                <img src="images/home_fries.jpg" alt="Home Fries">
+                <h3>Home Fries</h3>
+                <p>$5 - "Seasoned to perfection, these thick-cut, golden home fries are a hearty and satisfying classic. Perfectly crispy on the edges and tender in the center."</p>
+                <button onclick="addToOrder('Home Fries', 5)">Add To Order</button>
+            </div>   
 
-nav li {
-    margin: 0 15px;
-}
+            <div class="menu-item"> 
+                <img src="images/truffle_fries.jpg" alt="Truffle Fries">
+                <h3>Truffle Fries</h3>
+                <p>$7 - Elevate your fry experience with our hand-cut truffle fries. Tossed in aromatic truffle oil and topped with Parmesan cheese, these gourmet fries are pure indulgence.</p>
+                <button onclick="addToOrder('Truffle Fries', 7)">Add To Order</button>
+            </div>   
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
+            <h3><em>Dips</em></h3>
 
-nav a:hover {
-    text-decoration: underline;
-    color: green;
-}
+            <div class="menu-item"> 
+                <img src="images/Ketchup.jpg" alt="Ketchup">
+                <h3>Ketchup</h3>
+                <p>$1 - Ketchup</p>
+                <button onclick="addToOrder('Ketchup', 1)">Add To Order</button>
+            </div>
 
+            <div class="menu-item"> 
+                <img src="images/mayonnaise.jpg" alt="mayonnaise">
+                <h3>Mayonnaise</h3>
+                <p>$1 - Mayonnaise</p>
+                <button onclick="addToOrder('Mayonnaise', 1)">Add To Order</button>
+            </div>
 
+            <div class="menu-item"> 
+                <img src="images/spicy_mayo.jpg" alt="Spicy Mayo">
+                <h3>Spicy Mayo</h3>
+                <p>$1 - Spicy Mayo</p>
+                <button onclick="addToOrder('Spicy Mayo', 1)">Add To Order</button>
+            </div>
 
-/* Main Order Page Layout */
-.order-page {
-    display: flex; /* Splits the layout into two sections */
-    gap: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-}
+            <div class="menu-item"> 
+                <img src="images/ranch_dressing.jpg" alt="Ranch Dressing">
+                <h3>Ranch Dressing</h3>
+                <p>$1 - Ranch Dressing</p>
+                <button onclick="addToOrder('Ranch Dressing', 1)">Add To Order</button>
+            </div>
 
-                /* Menu Section */
-.menu {
-    flex: 2; /* Takes up 2/3 of the space */
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    overflow-y: auto;
-    max-height: 600px;
-}
+            <div class="menu-item"> 
+                <img src="images/honey_mustard.jpg" alt="Honey Mustard">
+                <h3>Honey Mustard</h3>
+                <p>$1 - Honey Mustard</p>
+                <button onclick="addToOrder('Honey Mustard', 1)">Add To Order</button>
+            </div>
 
-.menu h2 {
-    margin-bottom: 15px;
-    color: #ff5722;
-}
-
-.menu-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.menu-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-
-.menu-item button {
-    background: #ff5722;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.menu-item button:hover {
-    background: #e43804;
-}
-                              /* Order Summary Section */
-.order-summary {
-    flex: 1; /* Takes up 1/3 of the space */
-    background: rgb(170, 174, 243);
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(101, 31, 31, 0.1);
-    top: 20px; /* Sticks to the top when scrolling */
-}
-
-.order-summary h2 {
-    color: #ff5722;
-}
-
-#order-list {
-    list-style: none;
-    padding: 0;
-}
-
-#order-list li {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-#remove-order{
-    color:red;
-    cursor: pointer;
-}
-
-#total-price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 20px;
-}
+            <div class="menu-item"> 
+                <img src="images/garlic_aioli.jpg" alt="Garlic Aioli">
+                <h3>Garlic Aioli</h3>
+                <p>$1 - Garlic Aioli</p>
+                <button onclick="addToOrder('Garlic Aioli', 1)">Add To Order</button>
+            </div>
 
 
 
-#place-order {
-    width: 100%;
-    padding: 10px 0;
-    background: rgb(8, 137, 8);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
+            <h3><em>Drinks</em></h3>
 
-#place-order:hover {
-    background: green;
-    cursor: pointer;
-}
+            <div class="menu-item"> 
+                <img src="images/chocolate-milkshake.jpg" alt="chocolate milkshake">
+                <h3>chocolate milkshake</h3>
+                <p>$6 - </p>
+                <button onclick="addToOrder('Chocolate Milkshake', 6)">Add To Order</button>
+            </div>
+
+            <div class="menu-item"> 
+                <img src="images/coffee.jpg" alt="coffee">
+                <h3>Truffle Fries</h3>
+                <p>$3 - Coffee</p>
+                <button onclick="addToOrder('Coffee', 3)">Add To Order</button>
+            </div>
+
+            <div class="menu-item"> 
+                <img src="images/tea.jpg" alt="Tea">
+                <h3>Tea</h3>
+                <p>$2 - Tea</p>
+                <button onclick="addToOrder('Tea', 2)">Add To Order</button>
+            </div>
+
+            <div class="menu-item"> 
+                <img src="images/soda.jpg" alt="soda">
+                <h3>Soda</h3>
+                <p>$3 - Soda</p>
+                <button onclick="addToOrder('Soda', 2)">Add To Order</button>
+            </div>
+
+        </section>
+
+        <!-- Order Summary Section -->
+        <section class="order-summary">
+            <h2>Order Summary</h2>
+            <ul id="order-list"></ul>
+            <p id="total-price">Total: $0</p>
+            <a href="submit.html"><button id="place-order">Place Order</button></a>
+        </section>
+    </main>
+    <script src="js.js"></script>
+</body>
+</html>
