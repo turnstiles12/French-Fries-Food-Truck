@@ -88,6 +88,8 @@ buttons.forEach(button => {
         });
     });
 });
+
+
 const jokeEl = document.getElementById('joke')
 const jokeBtn = document.getElementById('insert-joke')
 
@@ -108,4 +110,32 @@ async function generateJoke() {
   const data = await res.json()
 
   jokeEl.innerHTML = data.joke
+}
+
+
+
+
+
+//loading animation
+const menuContainer = document.querySelector('.menu');
+const boxes = document.querySelectorAll('.menu-item')
+
+menuContainer.addEventListener('scroll', checkBoxes)
+
+checkBoxes()
+
+function checkBoxes() {
+    const containerRect = menuContainer.getBoundingClientRect();
+
+    const triggerBottom = containerRect.top + (containerRect.height / 5 * 4);
+
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top
+
+        if(boxTop < triggerBottom) {
+            box.classList.add('show')
+        } else {
+            box.classList.remove('show')
+        }
+    })
 }
