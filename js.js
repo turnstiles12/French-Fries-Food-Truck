@@ -23,6 +23,7 @@ app.get("/aboutus", (req, res) => {
 
 let orders = [];
 let total = 0;
+
 function addToOrder(name, price) {
     orders.push({name: name, price: price});
 
@@ -58,6 +59,32 @@ function removeItem(index) {
     updateOrderSummary();
 }
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+
+
+
+//ripple effect on "place order" buttons
+
+const buttons = document.querySelectorAll('.menu-item button');
+buttons.forEach(button => {
+    button.addEventListener('click', function (e) {
+        const x = e.clientX;
+        const y = e.clientY;
+
+        const buttonTop = e.target.offsetTop;
+        const buttonLeft = e.target.offsetLeft;
+
+        const xInside = x - buttonLeft;
+        const yInside = y - buttonTop;
+
+        const circle = document.createElement('span');
+        circle.classList.add('circle');
+        circle.style.top = yInside + 'px';
+        circle.style.left = xInside + 'px';
+
+        this.appendChild(circle);
+
+        circle.addEventListener('animationend', () => {
+            circle.remove();
+        });
+    });
 });
